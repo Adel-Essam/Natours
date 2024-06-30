@@ -4,8 +4,7 @@ const tourM = require("../models/toursModel");
 const AppError = require("../utils/AppError");
 const catchAsync = require("../utils/catchAsync");
 const handlerFactory = require("./handlerFactory");
-// const openAI = require("openai");
-// const axios = require("axios");
+
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const multerStorage = multer.memoryStorage(); // to make the image store as buffer.
