@@ -224,21 +224,6 @@ exports.ask = catchAsync(async (req, res, next) => {
 		);
 });
 
-// const client = new openAI.OpenAI({
-//     apiKey: "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",
-// });
-// const completions = await client.chat.completions.create({
-//     messages: [
-//         {
-//             role: "system",
-//             content: "what is the best operating system for programing",
-//         },
-//     ],
-//     model: "gpt-3.5-turbo",
-// });
-// console.log(completions.choices[0]);
-// Access your API key as an environment variable (see "Set up your API key" above)
-
 exports.getAllTours = handlerFactory.getAll(tourM);
 exports.createTour = handlerFactory.createOne(tourM);
 exports.getTour = handlerFactory.getOne(tourM, "reviews");
