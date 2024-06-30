@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google Translate Test</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+
+			#google_translate_element {
+				float: right;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Google Translate Test</h1>
+			<p>This is a test page for Google Translate integration.</p>
+			<p>This content will be translated into different languages.</p>
+		</div>
+
+		<!-- Google Translate Element -->
+		<div id="google_translate_element"></div>
+
+		<!-- Google Translate API Script -->
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: "en",
+						includedLanguages: "ar,en,es,fr", // English, Arabic, Spanish, French
+					},
+					"google_translate_element"
+				);
+			}
+		</script>
+		<script
+			type="text/javascript"
+			src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+		></script>
+	</body>
+</html>
