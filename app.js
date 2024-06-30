@@ -15,6 +15,7 @@ const userRouter = require("./routes/userRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
 const bookingsRouter = require("./routes/bookingsRoutes");
 const viewRouter = require("./routes/viewRoutes");
+const compression = require("compression");
 
 // Start express app
 const app = express();
@@ -71,8 +72,9 @@ app.use(
 	})
 );
 
-// 3) ROUTES
+app.use(compression());
 
+// 3) ROUTES
 app.use("/", viewRouter);
 app.use("/api/tours", tourRouter);
 app.use("/api/users", userRouter);

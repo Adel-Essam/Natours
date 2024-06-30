@@ -7,10 +7,7 @@ var stripe = Stripe(
 export const bookTour = async (tourId) => {
 	try {
 		// 1) Get checkout sessoion frim API
-		const session = await axios(
-			`http://localhost:3000/api/bookings/checkout-session/${tourId}`
-		);
-		console.log("session :>> ", session);
+		const session = await axios(`/api/bookings/checkout-session/${tourId}`);
 
 		// 2) Create checkout form + credit card
 		await stripe.redirectToCheckout({
