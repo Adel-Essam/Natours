@@ -179,9 +179,7 @@ exports.ask = catchAsync(async (req, res, next) => {
 		return rest;
 	});
 
-	const genAI = new GoogleGenerativeAI(
-		"AIzaSyAK6eL1MiRBw-5TMZqn5mY3VRjBq5TF9wE"
-	);
+	const genAI = new GoogleGenerativeAI(AI_API_KEY);
 
 	// For text-only input, use the gemini-pro model
 	const model = genAI.getGenerativeModel({ model: "gemini-pro" });
